@@ -31,4 +31,5 @@ class Sumasim:
         for i in range(2, self.n, 2):
             self.F(self.a + i * w)
             suma_p += 2 * self.fx
+
         self.resultado=(w/3)*(fa+suma_i+suma_p+fb)
