@@ -80,6 +80,10 @@ QMenu::item:selected {
     <addaction name="separator"/>
     <addaction name="actioncalculadora_psp_2"/>
     <addaction name="separator"/>
+    <addaction name="actioncalculadora_psp_3"/>
+    <addaction name="separator"/>
+    <addaction name="actioncalculadora_psp_4"/>
+    <addaction name="separator"/>
     <addaction name="actionsalir"/>
    </widget>
    <addaction name="menuejercicios"/>
@@ -98,6 +102,16 @@ QMenu::item:selected {
   <action name="actioncalculadora_psp_2">
    <property name="text">
     <string>calculadora psp 2</string>
+   </property>
+  </action>
+  <action name="actioncalculadora_psp_3">
+   <property name="text">
+    <string>calculadora psp 3</string>
+   </property>
+  </action>
+  <action name="actioncalculadora_psp_4">
+   <property name="text">
+    <string>calculadora psp 4</string>
    </property>
   </action>
  </widget>

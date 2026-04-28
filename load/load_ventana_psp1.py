@@ -41,16 +41,6 @@ class VentanaCalculadoraSum(QtWidgets.QMainWindow):
 
 
     def calcular(self):
-        """Lee XK desde el lineEdit, usa el dataset (self.x,self.y) y
-        calcula b0,b1,R,R2 y Yk. Actualiza las etiquetas de resultados.
-
-
-        Supuestos:
-        - Si quieres usar otros datasets, implementa los botones Case para
-          asignar self.x,self.y antes de pulsar Calcular.
-        - El campo `lineEdit` contiene el valor XK para el que se predice YK.
-        """
-
 
         txt = self.lineEdit.text().strip()
         try:
@@ -106,6 +96,12 @@ class VentanaCalculadoraSum(QtWidgets.QMainWindow):
         except Exception as e:
             QtWidgets.QMessageBox.warning(self, "Error predicción", f"No se pudo calcular Yk: {e}")
             yk = 0.0
+        # Guardar resultados como atributos de la instancia para que otras ventanas los usen
+        self.b0 = b0
+        self.b1 = b1
+        self.R = R
+        self.R2 = R2
+        self.yk = yk
         fmt = lambda v: f"{v:.4f}"
         try:
             self.label_8.setText(fmt(b1))
